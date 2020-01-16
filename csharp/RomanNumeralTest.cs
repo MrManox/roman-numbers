@@ -103,5 +103,23 @@ namespace csharp
             Assert.AreEqual (exp, res);
         }
 
+        [TestMethod]
+        public void ThrowsIfNegative ()
+        {
+            Assert.ThrowsException<ArgumentException> (() => rn.ConvertArabicToRomanNumeral (-1));
+        }
+
+        [TestMethod]
+        public void ThrowsIfTooLarge ()
+        {
+            Assert.ThrowsException<ArgumentException> (() => rn.ConvertArabicToRomanNumeral (-1));
+        }
+
+        [TestMethod]
+        public void ThrowsIfZero ()
+        {
+            Assert.ThrowsException<ArgumentException> (() => rn.ConvertArabicToRomanNumeral (0));
+        }
+
     }
 }
