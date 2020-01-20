@@ -9,7 +9,7 @@ namespace csharp
 
         RomanNumeral rn;
 
-        [TestInitialize ()]
+        [TestInitialize]
         public void before ()
         {
             rn = new RomanNumeral ();
@@ -112,7 +112,7 @@ namespace csharp
         [TestMethod]
         public void ThrowsIfTooLarge ()
         {
-            Assert.ThrowsException<ArgumentException> (() => rn.ConvertArabicToRomanNumeral (-1));
+            Assert.ThrowsException<ArgumentException> (() => rn.ConvertArabicToRomanNumeral (4000));
         }
 
         [TestMethod]
